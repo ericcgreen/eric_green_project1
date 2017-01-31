@@ -1,0 +1,41 @@
+.board{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  height: 500px;
+  width: 1000px;
+}
+.content{
+  height: 500px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.towers{
+  height: 500px;
+  width: 250px;
+  background-color:aliceblue;
+  margin: 0 20px;
+}
+
+.tiles{
+  height: 55px;
+}
+#t1{
+  background-color: #f62a00;
+  width: 90px;
+}
+#t2{
+  background-color: coral;
+  width: 110px;
+}
+#t3{
+  background-color: yellow;
+  width: 130px;
+}
+#t4{
+  background-color: #1e656d;
+  width: 150px;
+}
