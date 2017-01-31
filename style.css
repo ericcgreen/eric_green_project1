@@ -4,22 +4,21 @@
   background-color: black;
   height: 500px;
   width: 1000px;
-}
-.content{
-  height: 500px;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  background-image: ("images/Hanoitower.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .towers{
   height: 500px;
   width: 250px;
   background-color:aliceblue;
   margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
-
 .tiles{
   height: 55px;
 }

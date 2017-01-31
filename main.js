@@ -30,34 +30,31 @@
 //}
 //else if( top tile is bigger than top tile of selcted tower, invalid move)
 //using logic from "last child" build towers and disk:
-var holding = [],
-tiles = 4,
-$content = $(".content"),
+var tiles = [($("#t1")), ($("#t2")), ($("#t3")), ($("#t4"))],
+ tower1 = $("#tower1");
+ tower2 = $("#tower2");
+ tower3 = $("#tower3");
+ towers = (tower1, tower2, tower3);
+ 
 
+$(document).ready(function(){
 
-function content(content){
-  var $tiles = content.children(),
-  $topTile = content.find(":first-child"),
-  topTileValue = $topTile.data("value"),
-  $holdingTisk = $canves.find(".hold");
+//start game
 
-if($holdingTile.length !== 0){
-  if(topTileValue === holding[0]){
-    $holdingDisk.removeClass("hold");
-  }else if (topTileValue === undefined || topTileValue> holding[0]){
-    $holdingTile.remove();
-    content.append($(tiles)); //trying to append titles to other towers...not working
-  }else if ($topTile.length !==0){
-    $topTile.addclass("hold");
-    holding[0] = topTileValue;
-  }
+function initGame(){
+tower1.on("click", function(){
+  tower.children().children().eq(0)
+});
+
 }
+// tower.children().children().eq(0)
+//
+// check to see if any tiles are in second tower
+// if yes, is it allowed? if yes move
+//
+// tower2.children().children().eq(0).preprend(“.tiles”)
 
-$content.on("click", function(){
-  
 })
-
-}
 
 
 
