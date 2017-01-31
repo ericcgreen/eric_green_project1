@@ -4,31 +4,26 @@ var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
  tower3 = $("#tower3");
  towers = $(".towers");
 
+var active = false;
 
-if (parseInt($("active").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0){
-
-
-var clicks = 1;
 towers.click(function(){
 
-    if (clicks%2==1) {
-      $(this).children().eq(0).addClass("active");//able to select the first child of a tower
-      clicks = clicks+1;
-      if (parseInt($("active").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0){
+    if (active==true) {
+
+      if (parseInt($(".active").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0){
         $(this).prepend($(".active")) //move to selected tower clicked
         $('.active').removeClass('active');
+        active = false;
       }
     }
-   else if (clicks%2==0) {
-     $(this).children().eq(0).removeClass("active");
-     clicks = clicks+1;
+   else {
+     $(this).children().eq(0).addClass("active");
+     active = true;
      }
 
    });
- }
 
 
-console.log("hello")
 //compare selected text of the child against the text of the tower being clicked
 
 
