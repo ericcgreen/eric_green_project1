@@ -30,11 +30,11 @@ towers.click(function(){
 
 
    //create a game won/lost alert
-   function checkWin(){
-   if(tower3.children().length === 4){
-     alert("Congratulaions! You've caught them all!");
-     gameover = true;
-   } setTimeout(checkWin, 5000);}
+  //  function checkWin(){
+  //  if(tower3.children().length === 4){
+  //    alert("Congratulaions! You've caught them all!");
+  //    gameover = true;
+  //  } setTimeout(checkWin, 5000);}
    });
 //how to deselect active class
 //compare selected text of the child against the text of the tower being clicked
