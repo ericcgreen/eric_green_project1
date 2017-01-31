@@ -1,3 +1,50 @@
+var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
+ tower1 = $("#tower1");
+ tower2 = $("#tower2");
+ tower3 = $("#tower3");
+ towers = $(".towers");
+
+
+if (parseInt($("active").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0){
+
+
+var clicks = 1;
+towers.click(function(){
+
+ if (clicks%2==1) {
+   $(this).children().eq(0).addClass("active");//able to select the first child of a tower
+   clicks = clicks+1;
+   console.log($(this))
+  $(this).prepend($(".active")) //move to selected tower clicked
+ }
+else if (clicks%2==0) {
+  $(this).children().eq(0).removeClass("active");
+  clicks = clicks+1;
+  }
+
+});
+}
+console.log("hello")
+//compare selected text of the child against the text of the tower being clicked
+
+
+
+//move tiles functions
+
+// function moveTile1(){
+//   $(".active").prependTo("#tower1");
+//   $(".active").removeClass("active");
+// }
+//
+// function moveTile2(){
+//   $(".active").prependTo("#tower2");
+//   $(".active").removeClass("active");
+// }
+// function moveTile3(){
+//   $(".active").prependTo("#tower3");
+//   $(".active").removeClass("active");
+// }
+
 //move top block to different towers
 //move next block to different tower, but a bigger block cannot be put on top of a smaller block.
 //if a bigger block is moved on top a smaller block, this is an invalid move, send last selected block back to previous position.
@@ -30,11 +77,7 @@
 //}
 //else if( top tile is bigger than top tile of selcted tower, invalid move)
 //using logic from "last child" build towers and disk:
-var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
- tower1 = $("#tower1");
- tower2 = $("#tower2");
- tower3 = $("#tower3");
- towers = $(".towers");
+
 
 // function compareTowers(){
 // if tower = empty, add tile
@@ -42,40 +85,14 @@ var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
 // else if active tile > tower first child, deselect active. >>>> if tower == tower, deselect
 // }
 
-$(document).ready(function(){
-
-towers.click(function(){
- if $(this).children().eq(0).addClass("active"){//able to select the first child of a tower
-else{$(this).children().eq(0).removeClass("active")
-
-}
-} );
-
-
-})
-//move tiles functions
-
-function moveTile1(){
-  $(".active").prependTo("#tower1");
-  $(".active").removeClass("active");
-}
-
-function moveTile2(){
-  $(".active").prependTo("#tower2");
-  $(".active").removeClass("active");
-}
-function moveTile3(){
-  $(".active").prependTo("#tower3");
-  $(".active").removeClass("active");
-}
-function compareTiles(){ //compares the titles
-
-}
-}
-
-function compareTowers(){
-  if tower is empty
-}
+// function compareTiles(){ //compares the titles
+//
+// }
+// }
+//
+// function compareTowers(){
+//   if tower is empty
+// }
 // towers.click(function(){
 //   if (active === true){
 //     $(this).append($(".active"))
