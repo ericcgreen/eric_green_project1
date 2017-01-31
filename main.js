@@ -3,8 +3,8 @@ var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
  tower2 = $("#tower2");
  tower3 = $("#tower3");
  towers = $(".towers");
-//var gameover = false
-var active = false;//initally there is not a click
+ gameover = false;
+ active = false;//initally there is not a click
 
 towers.click(function(){
 
