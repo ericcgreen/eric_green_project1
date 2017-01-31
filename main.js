@@ -30,23 +30,69 @@
 //}
 //else if( top tile is bigger than top tile of selcted tower, invalid move)
 //using logic from "last child" build towers and disk:
-var tiles = [($("#t1")), ($("#t2")), ($("#t3")), ($("#t4"))],
+var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
  tower1 = $("#tower1");
  tower2 = $("#tower2");
  tower3 = $("#tower3");
- towers = (tower1, tower2, tower3);
- 
+ towers = $(".towers");
+
+// function compareTowers(){
+// if tower = empty, add tile
+// if tower is not empty, compare first child to active. >>> if active tile < tower first child, add.
+// else if active tile > tower first child, deselect active. >>>> if tower == tower, deselect
+// }
 
 $(document).ready(function(){
 
-//start game
-
-function initGame(){
-tower1.on("click", function(){
-  tower.children().children().eq(0)
-});
+towers.click(function(){
+ if $(this).children().eq(0).addClass("active"){//able to select the first child of a tower
+else{$(this).children().eq(0).removeClass("active")
 
 }
+} );
+
+
+})
+//move tiles functions
+
+function moveTile1(){
+  $(".active").prependTo("#tower1");
+  $(".active").removeClass("active");
+}
+
+function moveTile2(){
+  $(".active").prependTo("#tower2");
+  $(".active").removeClass("active");
+}
+function moveTile3(){
+  $(".active").prependTo("#tower3");
+  $(".active").removeClass("active");
+}
+function compareTiles(){ //compares the titles
+
+}
+}
+
+function compareTowers(){
+  if tower is empty
+}
+// towers.click(function(){
+//   if (active === true){
+//     $(this).append($(".active"))
+//     $(".active").removeClass("active")
+//     active = false
+//
+//   }else{
+//     $(this).find(":first-child")
+
+
+
+
+//start game
+
+
+//add class active
+
 // tower.children().children().eq(0)
 //
 // check to see if any tiles are in second tower
@@ -54,7 +100,7 @@ tower1.on("click", function(){
 //
 // tower2.children().children().eq(0).preprend(“.tiles”)
 
-})
+
 
 
 
