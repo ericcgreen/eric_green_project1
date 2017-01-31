@@ -4,7 +4,7 @@ var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
  tower3 = $("#tower3");
  towers = $(".towers");
 
-var active = false;
+var active = false;//initally there is not a click
 
 towers.click(function(){
 
@@ -14,16 +14,19 @@ towers.click(function(){
         $(this).prepend($(".active")) //move to selected tower clicked
         $('.active').removeClass('active');
         active = false;
+      } else {
+        $('.active').removeClass('active');
+        active = false;
+        }
       }
-    }
    else {
      $(this).children().eq(0).addClass("active");
      active = true;
-     }
+   }
 
    });
 
-
+//how to deselect active class
 //compare selected text of the child against the text of the tower being clicked
 
 
