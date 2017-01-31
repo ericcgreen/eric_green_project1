@@ -4,7 +4,7 @@
   background-color: black;
   height: 500px;
   width: 1000px;
-  background-image: ("images/Hanoitower.jpg");
+  background-image: url("images/Hanoitower.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +12,7 @@
 .towers{
   height: 500px;
   width: 250px;
-  background-color:aliceblue;
+  background-color:rgba(240, 248, 255, 0.5);
   margin: 0 20px;
   display: flex;
   flex-direction: column;

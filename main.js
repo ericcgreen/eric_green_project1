@@ -11,19 +11,23 @@ if (parseInt($("active").eq(0).text()) < parseInt($(this).children().eq(0).text(
 var clicks = 1;
 towers.click(function(){
 
- if (clicks%2==1) {
-   $(this).children().eq(0).addClass("active");//able to select the first child of a tower
-   clicks = clicks+1;
-   console.log($(this))
-  $(this).prepend($(".active")) //move to selected tower clicked
- }
-else if (clicks%2==0) {
-  $(this).children().eq(0).removeClass("active");
-  clicks = clicks+1;
-  }
+    if (clicks%2==1) {
+      $(this).children().eq(0).addClass("active");//able to select the first child of a tower
+      clicks = clicks+1;
+      if (parseInt($("active").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0){
+        $(this).prepend($(".active")) //move to selected tower clicked
+        $('.active').removeClass('active');
+      }
+    }
+   else if (clicks%2==0) {
+     $(this).children().eq(0).removeClass("active");
+     clicks = clicks+1;
+     }
 
-});
-}
+   });
+ }
+
+
 console.log("hello")
 //compare selected text of the child against the text of the tower being clicked
 
