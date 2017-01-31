@@ -3,7 +3,7 @@ var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
  tower2 = $("#tower2");
  tower3 = $("#tower3");
  towers = $(".towers");
-
+//var gameover = false
 var active = false;//initally there is not a click
 
 towers.click(function(){
@@ -24,8 +24,18 @@ towers.click(function(){
      active = true;
    }
 
-   });
+//}
+//create a score keeper/move tracker
+//create a timer
 
+
+   //create a game won/lost alert
+   function checkWin(){
+   if(tower3.children().length === 4){
+     alert("Congratulaions! You've caught them all!");
+     gameover = true;
+   } setTimeout(checkWin, 5000);}
+   });
 //how to deselect active class
 //compare selected text of the child against the text of the tower being clicked
 
