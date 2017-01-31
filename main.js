@@ -30,11 +30,33 @@
 //}
 //else if( top tile is bigger than top tile of selcted tower, invalid move)
 //using logic from "last child" build towers and disk:
-function tower(tower){
-  var $tiles = tower.children(),
-  $topTile = tower.find(":last-child"),
+var holding = [],
+tiles = 4,
+$content = $(".content"),
+
+
+function content(content){
+  var $tiles = content.children(),
+  $topTile = content.find(":first-child"),
   topTileValue = $topTile.data("value"),
   $holdingTisk = $canves.find(".hold");
+
+if($holdingTile.length !== 0){
+  if(topTileValue === holding[0]){
+    $holdingDisk.removeClass("hold");
+  }else if (topTileValue === undefined || topTileValue> holding[0]){
+    $holdingTile.remove();
+    content.append($(tiles)); //trying to append titles to other towers...not working
+  }else if ($topTile.length !==0){
+    $topTile.addclass("hold");
+    holding[0] = topTileValue;
+  }
+}
+
+$content.on("click", function(){
+  
+})
+
 }
 
 
@@ -42,7 +64,9 @@ function tower(tower){
 //var tile = $(".tiles:first-child")
 //tile.on("click", function(){
 //  $("#tower2 > .content").append(tile)
-//});
+//}else if(the top value of the last child is greater than the value of the holding item)
+
+//);
 //var tile2 = $(".tiles:nth-last-child(1)")
 //tile2.on("click", function(){
 //  $("#tower3 > .content").append(tile2)
