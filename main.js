@@ -30,15 +30,16 @@ function checkWin(){
     gameover = true;
    }
  }
-function resetGame(){//trying to add reset by clearing the board and adding the html code back into their original places, but it's not working
-  reset.click(function(){
-    $('<div class="towers" id="tower1">').html('<div class="tiles" id="t1">1</div><div class="tiles" id="t2">2</div><div class="tiles" id="t3">3</div><div class="tiles" id="t4">4</div></div>');
-    $('<div class="towers" id="tower2"></div>').empty();
-    $('<div class="towers" id="tower3"></div>').empty();
-    $("#announce-game-won").empty();
-    gameover = false;
+// function resetGame(){//trying to add reset by clearing the board and adding the html code back into their original places, but it's not working
+  reset.on('click',function(){
+    location.reload();
+    // $('<div class="towers" id="tower1">').html('<div class="tiles" id="t1">1</div><div class="tiles" id="t2">2</div><div class="tiles" id="t3">3</div><div class="tiles" id="t4">4</div></div>');
+    // $('<div class="towers" id="tower2"></div>').empty();
+    // $('<div class="towers" id="tower3"></div>').empty();
+    // $("#announce-game-won").empty();
+    // gameover = false;
   })
-}
+})
 //}
 //create a score keeper/move tracker
 //create a timer
@@ -46,7 +47,7 @@ function resetGame(){//trying to add reset by clearing the board and adding the 
 
    //create a game won/lost alert
 
-   });
+  //  });
 
 
 
