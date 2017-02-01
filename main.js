@@ -30,6 +30,7 @@ function checkWin(){
     gameover = true;
    }
  }
+
 // function resetGame(){//trying to add reset by clearing the board and adding the html code back into their original places, but it's not working
   reset.on('click',function(){
     location.reload();
@@ -40,6 +41,7 @@ function checkWin(){
     // gameover = false;
   })
 })
+
 //}
 //create a score keeper/move tracker
 //create a timer
