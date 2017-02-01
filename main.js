@@ -5,7 +5,7 @@ var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
  towers = $(".towers");
  gameover = false;
  active = false;//initally there is not a click
-
+ reset = $("#resetButton")
 towers.click(function(){
 
     if (active==true) {
@@ -23,22 +23,35 @@ towers.click(function(){
      $(this).children().eq(0).addClass("active");
      active = true;
    }
-
+setTimeout(checkWin, 2000);
+function checkWin(){
+  if(tower3.children().length === 4){
+    $("#announce-game-won").html("Congratulaions! You've caught them all!");
+    gameover = true;
+   }
+ }
+function resetGame(){
+  reset.click(function(){
+    $('<div class="towers" id="tower1">').html('<div class="tiles" id="t1">1</div><div class="tiles" id="t2">2</div><div class="tiles" id="t3">3</div><div class="tiles" id="t4">4</div></div>');
+    $('<div class="towers" id="tower2"></div>').empty();
+    $('<div class="towers" id="tower3"></div>').empty();
+    $("#announce-game-won").empty();
+    gameover = false;
+  })
+}
 //}
 //create a score keeper/move tracker
 //create a timer
 
 
    //create a game won/lost alert
-  //  function checkWin(){
-  //  if(tower3.children().length === 4){
-  //    alert("Congratulaions! You've caught them all!");
-  //    gameover = true;
-  //  } setTimeout(checkWin, 5000);}
+
    });
+
+
+
 //how to deselect active class
 //compare selected text of the child against the text of the tower being clicked
-
 
 
 //move tiles functions

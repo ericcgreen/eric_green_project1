@@ -13,6 +13,29 @@ body{
   background-size: cover;
 
 }
+#announce-game-won{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'VT323', monospace;
+  font-size: 35px;
+}
+.wrapper{
+
+}
+p{
+  display: none;
+  position: absolute;
+  background-color: rgba(243, 229, 203, 0.5);
+  width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'VT323', monospace;
+  font-size: 15px;
+  padding: 10px;
+}
+.wrapper:hover p{
+  display: block;
+}
 .board{
   display: flex;
   justify-content: space-around;
@@ -96,15 +119,20 @@ body{
   color: rgba(0, 0, 0, 0);
   border-radius: 50px;
 }
+#resetButton{
+   background-color: rgba(0, 0, 0, 0);
+   border-radius: 50%;
+   border: none;
+ }
 .active{
   border: 2px solid black;
 }
 @media (max-width: 500px){
-  nav{
+nav{
     display: flex;
     justify-content: space-around;
  }
-  body{
+body{
       background-position: center;
  }
  .board{

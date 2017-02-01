@@ -5,12 +5,18 @@
   <link rel="stylesheet" href="style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   </head>
 
-  <body>
+<body>
 <nav>
 <div class="wrapper">
   <img src="images/PokeBall.png" alt="Instructions" title="Instructions" height="50" width="50">
+  <p>The Towers of Hanoi is an ancient puzzle played with three stacks and any number of differently-sized disks. At the start, all the disks are in the leftmost stack, with the largest disk on the bottom and the smallest on the top. The object is to get all the disks over to the rightmost stack.
+<br>
+    You can only move one disk per move, and you can only move the top disk on a stack. The top disk of any stack can be moved to the top disk of any other stack, with the restriction that you can't move a larger disk on top of a smaller disk -- i.e., disks can only be moved to empty stacks or on top of larger disks.
+<br>
+    To move a disk, click on it. (If you can't click on a disk, it means you can't legally move it anywhere.) If there is only one place the disk can be moved to, it will be moved there automatically; otherwise, you'll have to click on a stack to move it to.</p>
 </div>
 <div class="wrapper">
   <img src="images/GreatBall.png" alt="History" title="History" height="50" width="50">
@@ -18,11 +24,11 @@
 <div class="wrapper">
   <img src="images/UltraBall.png" alt="Sources" title="Sources" height="50" width="50">
 </div>
-<div class="wrapper">
-  <img src="images/MasterBall.png" alt="Reset" title="Reset" height="50" width="50">
-</div>
+<button type="reset" id="resetButton">
+  <img src="images/MasterBall.png" alt="Reset" title="Reset" height="50" width="50">RESET
+</button>
 </nav>
-
+<div id="announce-game-won"></div>
     <div class="board">
 
   <div class="towers" id="tower1">
@@ -37,6 +43,7 @@
       </div>
 
     </div>
+
  <script src="main.js" type="text/javascript"></script>
     </body>
 
