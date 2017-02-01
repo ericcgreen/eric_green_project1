@@ -25,12 +25,12 @@ body{
 p{
   display: none;
   position: absolute;
-  background-color: rgba(243, 229, 203, 0.5);
+  background-color: rgba(243, 229, 203, 0.7);
   width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   font-family: 'VT323', monospace;
-  font-size: 15px;
+  font-size: 17px;
   padding: 10px;
 }
 .wrapper:hover p{

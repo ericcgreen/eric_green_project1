@@ -1,36 +1,36 @@
 var tiles = [$("#t1"), $("#t2"), $("#t3"), $("#t4")],
  tower1 = $("#tower1");
  tower2 = $("#tower2");
- tower3 = $("#tower3");
+ tower3 = $("#tower3");//some vars aren't used
  towers = $(".towers");
- gameover = false;
+ gameover = false;//game isn't over yet
  active = false;//initally there is not a click
- reset = $("#resetButton")
-towers.click(function(){
+ reset = $("#resetButton")//trying to add reset function
+towers.click(function(){//game function
 
-    if (active==true) {
+    if (active==true) {//click in tower is active
 
-      if (parseInt($(".active").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0){
+      if (parseInt($(".active").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0){//selected tile's value is turned into a numeric value which is compared against the numeric value of the first child of a selected tower
         $(this).prepend($(".active")) //move to selected tower clicked
         $('.active').removeClass('active');
-        active = false;
+        active = false;//remove active class of selecte tile once placed into tower
       } else {
         $('.active').removeClass('active');
-        active = false;
+        active = false;//remove active class of selected tile if not moved into a different tower
         }
       }
    else {
      $(this).children().eq(0).addClass("active");
-     active = true;
+     active = true;//if there are no values to compare, add active class to selected tile
    }
-setTimeout(checkWin, 2000);
+setTimeout(checkWin, 2000);//alert once game is won
 function checkWin(){
-  if(tower3.children().length === 4){
+  if(tower3.children().length === 4){//game is won once the proper number of children elements are placed into tower 3
     $("#announce-game-won").html("Congratulaions! You've caught them all!");
     gameover = true;
    }
  }
-function resetGame(){
+function resetGame(){//trying to add reset by clearing the board and adding the html code back into their original places, but it's not working
   reset.click(function(){
     $('<div class="towers" id="tower1">').html('<div class="tiles" id="t1">1</div><div class="tiles" id="t2">2</div><div class="tiles" id="t3">3</div><div class="tiles" id="t4">4</div></div>');
     $('<div class="towers" id="tower2"></div>').empty();
