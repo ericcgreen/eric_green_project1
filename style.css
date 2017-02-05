@@ -7,11 +7,6 @@ nav{
 }
 body{
   background-color: white;
-  background-position: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
 }
 #announce-game-won{
   display: flex;
@@ -39,27 +34,30 @@ p{
 .board{
   display: flex;
   justify-content: space-around;
-  background-color: black;
-  margin: 25px 100px;
-  height: 500px;
-  width: auto;
-  background-image: url("images/kantomap.png");
+  background-color: aliceblue;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("images/kantomap.png");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 25px 100px;
+  height: 580px;
+  width: auto;
+
 }
 .towers{
-  height: 500px;
-  width: 250px;
+  height: 580px;
+  width: 325px;
   background-color:rgba(240, 248, 255, 0.5);
-  margin: 0 20px;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
 .tiles{
-  height: 55px;
+  height: 45px;
 }
 #tower1{
   background-image: url(images/bulbasaur.png);
@@ -81,8 +79,8 @@ p{
 }
 #t1{
   background-color: rgba(0, 0, 0, 0);
-  width: 70px;
-  background-image: url(images/PokeBall.png);
+  width: 50px;
+  background-image: url(images/MasterBall.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -91,8 +89,8 @@ p{
 }
 #t2{
   background-color: rgba(0, 0, 0, 0);
-  width: 110px;
-  background-image: url(images/GreatBall.png);
+  width: 90px;
+  background-image: url(images/UltraBall.png);
   background-position: left;
   background-repeat: repeat;
   background-size: contain;
@@ -101,8 +99,8 @@ p{
 }
 #t3{
   background-color: rgba(0, 0, 0, 0);
-  width: 160px;
-  background-image: url(images/UltraBall.png);
+  width: 135px;
+  background-image: url(images/GreatBall.png);
   background-position: center;
   background-repeat: repeat;
   background-size: contain;
@@ -111,8 +109,38 @@ p{
 }
 #t4{
   background-color: rgba(0, 0, 0, 0);
-  width: 220px;
-  background-image: url(images/MasterBall.png);
+  width: 180px;
+  background-image: url(images/PokeBall.png);
+  background-position: left;
+  background-repeat: repeat;
+  background-size: contain;
+  color: rgba(0, 0, 0, 0);
+  border-radius: 50px;
+}
+#t5{
+  background-color: rgba(0, 0, 0, 0);
+  width: 225px;
+  background-image: url(images/PremierBall.png);
+  background-position: left;
+  background-repeat: repeat;
+  background-size: contain;
+  color: rgba(0, 0, 0, 0);
+  border-radius: 50px;
+}
+#t6{
+  background-color: rgba(0, 0, 0, 0);
+  width: 270px;
+  background-image: url(images/SafariBall.png);
+  background-position: left;
+  background-repeat: repeat;
+  background-size: contain;
+  color: rgba(0, 0, 0, 0);
+  border-radius: 50px;
+}
+#t7{
+  background-color: rgba(0, 0, 0, 0);
+  width: 318px;
+  background-image: url(images/CherishBall.png);
   background-position: left;
   background-repeat: repeat;
   background-size: contain;
@@ -158,8 +186,5 @@ body{
      justify-content: flex-end;
    }
    .tiles{
-     height: 55px;
-}
-
-
+     height: 45px;
 }
